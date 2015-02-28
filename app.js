@@ -40,7 +40,9 @@ module.controller('main', ['$scope', '$http', '$location', '$timeout', (function
 
 
 },{}],"/Users/Trikster/static_sites/RMS-Delightsoft/_RMS-Delightsoft/src/javascript/util.coffee":[function(require,module,exports){
-
+$(function() {
+  return $('video').get(0).play();
+});
 
 
 
