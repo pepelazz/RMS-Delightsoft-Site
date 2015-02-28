@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: 'fundamental__brigade_condenRg';
+    src: url('fundamental_brigade_condensed.eot');
+    src: url('fundamental_brigade_condensed.eot?#iefix') format('embedded-opentype'),
+         url('fundamental_brigade_condensed.woff') format('woff'),
+         url('fundamental_brigade_condensed.ttf.gz') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fundamental__brigade_scvhlaRg';
+    src: url('fundamental_brigade_schlank.eot');
+    src: url('fundamental_brigade_schlank.eot?#iefix') format('embedded-opentype'),
+         url('fundamental_brigade_schlank.woff') format('woff'),
+         url('fundamental_brigade_schlank.ttf.gz') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fundamental__brigade_schwerRg';
+    src: url('fundamental_brigade_schwer.eot');
+    src: url('fundamental_brigade_schwer.eot?#iefix') format('embedded-opentype'),
+         url('fundamental_brigade_schwer.woff') format('woff'),
+         url('fundamental_brigade_schwer.ttf.gz') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fundamental__brigaderegular';
+    src: url('fundamental_brigade.eot');
+    src: url('fundamental_brigade.eot?#iefix') format('embedded-opentype'),
+         url('fundamental_brigade.woff') format('woff'),
+         url('fundamental_brigade.ttf.gz') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

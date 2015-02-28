@@ -14,16 +14,6 @@ var module;
 
 module = angular.module('filters', []);
 
-module.filter('points', (function() {
-  return (function(num) {
-    if (num === '') {
-      return 0;
-    } else {
-      return num;
-    }
-  });
-}));
-
 
 
 },{}],"/Users/Trikster/static_sites/RMS-Delightsoft/_RMS-Delightsoft/src/javascript/loader.coffee":[function(require,module,exports){
@@ -45,38 +35,7 @@ var module;
 
 module = angular.module('app', ['filters']);
 
-module.controller('main', [
-  '$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {
-    var spreadsheet;
-    spreadsheet = 'https://spreadsheets.google.com/feeds/list/1LjQN1-P3qRBzkn3v3QRtnEEhjWPANR5WTmkpuMkY0dQ/od6/public/values?alt=json';
-    $scope.data = [];
-    $http.get(spreadsheet).success(function(data) {
-      data = _.map(data.feed.entry, (function(item) {
-        var newItem;
-        newItem = {
-          title: item.gsx$stud.$t,
-          avatar: item.gsx$avatar.$t,
-          points: +item.gsx$points.$t + +item.gsx$task.$t
-        };
-        return newItem;
-      }));
-      $scope.data = _.sortBy(data, function(item) {
-        return item.points * -1;
-      });
-      return $scope.rowPosition = (function(index) {
-        if (index < 50) {
-          return 'group-first';
-        }
-        if (index >= 50 && index <= 89) {
-          return 'group-second';
-        }
-        if (index > 89) {
-          return 'group-third';
-        }
-      });
-    });
-  })
-]);
+module.controller('main', ['$scope', '$http', '$location', '$timeout', (function($scope, $http, $location, $timeout) {})]);
 
 
 
