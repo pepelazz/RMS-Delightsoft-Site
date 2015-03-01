@@ -145,13 +145,11 @@ header .header-screen-title {
   width: 50%;
   box-shadow: -2px 2px 5px 1px rgba(50, 50, 50, 0.35);
 }
-header a {
-  text-decoration: none;
-}
 header .btn-to-app {
   display: block;
   width: 17rem;
   text-align: center;
+  text-decoration: none;
   line-height: 2;
   margin-top: 1rem;
   padding: 0.2rem 0.5rem;
@@ -164,19 +162,34 @@ header .btn-to-app:hover {
 }
 
 section {
+  background-color: #efece7;
   padding: 1rem 5%;
 }
-section .col1 {
-  width: 32.20339%;
-  float: left;
+section h2 {
+  text-align: center;
 }
-section .col2 {
-  width: 66.10169%;
+section .section-row {
+  overflow: hidden;
+  padding: 6rem 0;
+}
+section .section-row .col1 {
+  width: 46.42857%;
   float: left;
+  margin-left: 11.90476%;
+}
+section .section-row .col2 {
+  width: 22.61905%;
+  float: left;
+  margin-left: 5.95238%;
 }
 
 section.why-this-app {
-  background: #53b66d;
+  background: url("./images/minions.jpg") center center no-repeat fixed;
+  background-size: cover;
+  padding: 1rem 20%;
+}
+section.why-this-app ul {
+  padding: 0;
 }
 
 section.screen-description .screen-description-img {

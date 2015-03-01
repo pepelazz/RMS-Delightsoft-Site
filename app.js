@@ -40,9 +40,37 @@ module.controller('main', ['$scope', '$http', '$location', '$timeout', (function
 
 
 },{}],"/Users/Trikster/static_sites/RMS-Delightsoft/_RMS-Delightsoft/src/javascript/util.coffee":[function(require,module,exports){
-$(function() {
-  return $('video').get(0).play();
-});
+var checkScroll, fraction, videos;
+
+videos = document.getElementsByTagName('video');
+
+fraction = 0.5;
+
+checkScroll = function() {
+  var b, h, i, r, video, visible, visibleX, visibleY, w, x, y;
+  i = 0;
+  while (i < videos.length) {
+    video = videos[i];
+    x = video.offsetLeft;
+    y = video.offsetTop;
+    w = video.offsetWidth;
+    h = video.offsetHeight;
+    r = x + w;
+    b = y + h;
+    visibleX = void 0;
+    visibleY = void 0;
+    visible = void 0;
+    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+    visible = visibleX * visibleY / w * h;
+    if (visible > fraction) {
+      video.play();
+    } else {
+      video.pause();
+    }
+    i++;
+  }
+};
 
 
 
